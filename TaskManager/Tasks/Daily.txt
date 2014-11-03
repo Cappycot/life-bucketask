@@ -1,0 +1,4 @@
+Daily tasks are created here so that they can be loaded in daily...
+
+[Tasks]
+Example Task; Please complete this task.; 1; NOTE; This is a task!; 000000; 00aacc; true; 42
