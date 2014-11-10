@@ -64,7 +64,8 @@ public class TaskRunner extends Thread {
 	private TaskWindow window = new TaskWindow(this);
 	private TrayIcon trayIcon = null;
 	private MenuItem taskIndicator = new MenuItem("Open");
-	private MenuItem disposer = new MenuItem("Shutdowns Enabled...");
+	private MenuItem disposer = new MenuItem("Shutdowns "
+			+ (!testing ? "Enabled..." : "Disabled..."));
 
 	public static void main(String[] args) throws Exception {
 		File taskDir;
