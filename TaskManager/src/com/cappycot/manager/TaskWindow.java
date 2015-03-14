@@ -65,7 +65,6 @@ public class TaskWindow extends JFrame implements WindowListener {
 		setTitle("Miku's Task List V0.3.2");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(160, 40, 1600, 900);
-		// setBounds(160, 40, 1600, 900);
 		setResizable(false);
 
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
