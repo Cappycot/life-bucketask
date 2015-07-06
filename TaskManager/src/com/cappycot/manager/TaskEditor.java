@@ -49,7 +49,7 @@ public class TaskEditor extends JDialog {
 		final boolean newTask = task == null;
 		setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 		setIconImage(Toolkit.getDefaultToolkit().getImage(
-				TaskEditor.class.getResource("/com/cappycot/manager/Miku.gif"))); // Loli.png")));
+				TaskEditor.class.getResource("/com/cappycot/manager/YueHaiIcon.gif")));
 		setAlwaysOnTop(true);
 		setVisible(true);
 		requestFocus();

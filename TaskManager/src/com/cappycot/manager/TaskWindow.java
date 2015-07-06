@@ -61,8 +61,8 @@ public class TaskWindow extends JFrame implements WindowListener {
 	public TaskWindow(TaskRunner thread) {
 		this.thread = thread;
 		setIconImage(Toolkit.getDefaultToolkit().getImage(
-				TaskWindow.class.getResource("/com/cappycot/manager/YueHaiIcon.gif"))); // Loli.png")));
-		setTitle("Task List V0.3.3");
+				TaskWindow.class.getResource("/com/cappycot/manager/YueHaiIcon.gif")));
+		setTitle("Task List V0.3.5");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(160, 40, 1600, 900);
 		setResizable(false);
@@ -116,14 +116,18 @@ public class TaskWindow extends JFrame implements WindowListener {
 			taskPanel.setPreferredSize(new Dimension(taskPanel.getParent()
 					.getWidth(), tasks.size() >= min ? (ySize * tasks.size())
 					: min * ySize));
+			int dayCount = 0;
 			for (Task t : tasks) {
 				t.resize(taskPanel.getWidth());
 				taskPanel.add(t);
 				t.repaint();
+				if (t.isDaily())
+					dayCount++;
 			}
 			for (int i = 0; i < (min - tasks.size()); i++) {
 				taskPanel.add(Box.createVerticalStrut(ySize));
 			}
+			setDailyCount(dayCount);
 		} else {
 			taskPanel.setLayout(new GridLayout(1, 0, 0, 0));
 			taskPanel.setPreferredSize(new Dimension(taskPanel.getParent()
