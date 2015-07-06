@@ -61,8 +61,8 @@ public class TaskWindow extends JFrame implements WindowListener {
 	public TaskWindow(TaskRunner thread) {
 		this.thread = thread;
 		setIconImage(Toolkit.getDefaultToolkit().getImage(
-				TaskWindow.class.getResource("/com/cappycot/manager/Miku.gif"))); // Loli.png")));
-		setTitle("Miku's Task List V0.3.2");
+				TaskWindow.class.getResource("/com/cappycot/manager/YueHaiIcon.gif"))); // Loli.png")));
+		setTitle("Task List V0.3.3");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(160, 40, 1600, 900);
 		setResizable(false);
@@ -106,7 +106,7 @@ public class TaskWindow extends JFrame implements WindowListener {
 		if (newTasks != null)
 			tasks = newTasks;
 		taskPanel.removeAll();
-		int min = 6;
+		int min = 7;
 		int ySize = Task.getSizedY();
 		if (tasks.size() > 0) {
 			taskPanel.setLayout(new GridLayout(tasks.size() >= min ? tasks

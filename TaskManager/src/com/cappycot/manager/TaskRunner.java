@@ -108,7 +108,7 @@ public class TaskRunner extends Thread {
 		try {
 			ss = SplashScreen.getSplashScreen();
 			ss.setImageURL(TaskRunner.class
-					.getResource("/com/cappycot/manager/Miku.gif"));
+					.getResource("/com/cappycot/manager/YueHaiIcon.gif"));
 			// SplashScreen-Image: com/cappycot/manager/Miku.gif
 		} catch (Exception e) {
 			ss = null;
